@@ -11,7 +11,7 @@
         }
 
         .container {
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -35,7 +35,7 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-top: 5px;
             margin-bottom: 10px;
@@ -62,17 +62,26 @@
         <h1>Sign Up</h1>
         <form action="#" method="post">
             <div class="form-group">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname">
+                <label for="fullname">Last Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="fullname">First Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="fullname">Middle Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+                <input type="password" id="password" name="password" required
+                pattern="^(?=.*[a-z A-Z])(?=.*\d)(?=.+[!@#$%^&*]).{8,}$"
+                title= "Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*)." >
             </div>
             <button type="submit">Sign Up</button>
         </form>

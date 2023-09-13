@@ -91,10 +91,10 @@
             <div class="form-group">
                 <label for="department">Department:</label>
                 <select id="department" required>
-                    <option value="hr">HR</option>
-                    <option value="finance">Finance</option>
-                    <option value="it">IT</option>
-                    <option value="sales">Sales</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="IT">IT</option>
+                    <option value="Sales">Sales</option>
                 </select>
             </div>
             <div class="form-group">
@@ -102,6 +102,23 @@
                 <input type="text" id="office" required>
             </div>
             <button type="submit">Submit</button>
+            <script>
+
+document.addEventListener("submit", function(event)
+    {
+        event.preventDefault();
+       var last_name = document.getElementById("last_name");
+       var first_name = document.getElementById("first_name");
+       var middle_name = document.getElementById("middle_name");
+       var birthdate = document.getElementById("birthdate");
+       var department = document.getElementById("department");
+       var office = document.getElementById("office");
+        
+    console.log(`Fullname: ${last_name.value}, ${first_name.value} ${middle_name.value}\nBirthdate: ${birthdate.value}\nDepartment: ${department.value}\nOffice: ${office.value}`);
+
+}
+);
+</script>
         </form>
     </div>
 </body>
